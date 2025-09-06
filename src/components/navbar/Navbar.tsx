@@ -1,8 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg">
+    <nav className="fixed top-0 w-full bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Left: Brand */}
@@ -13,9 +14,9 @@ const Navbar: React.FC = () => {
           {/* Desktop Nav Items */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a href="#" className="text-white hover:bg-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
-              <a href="#" className="text-white hover:bg-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">About</a>
-              <a href="#" className="text-white hover:bg-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+              <Link href="/" className="text-white hover:bg-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</Link>
+              <Link href="/about" scroll={true} className="text-white hover:bg-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">About</Link>
+              <Link href="/contact" className="text-white hover:bg-white hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Contact</Link>
             </div>
           </div>
 
@@ -42,9 +43,9 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu */}
       <div className="md:hidden">
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-700">
-          <a href="#" className="text-white hover:bg-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-          <a href="#" className="text-white hover:bg-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
-          <a href="#" className="text-white hover:bg-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+          <Link href="#" className="text-white hover:bg-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</Link>
+          <Link href="#" className="text-white hover:bg-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</Link>
+          <Link href="#" className="text-white hover:bg-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
           <button className="text-white hover:bg-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium w-full text-left">
             Login
           </button>
